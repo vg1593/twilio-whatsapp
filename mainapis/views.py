@@ -6,7 +6,7 @@ from twilio.twiml.messaging_response import MessagingResponse
 
 class WhatsappApi(APIView):
     def post(self,request):
-        msg = request.form.get('Body')
+        msg = request.POST.get('Body')
         resp = MessagingResponse()
         resp.message("You said: {}".format(msg))
         return str(resp)
