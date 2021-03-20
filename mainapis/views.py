@@ -11,4 +11,4 @@ class WhatsappApi(APIView):
         msg = request.POST.get('Body')
         resp = MessagingResponse()
         resp.message("You said: {}".format(msg))
-        return HttpResponse(resp.to_xml, content_type='text/xml')
+        return HttpResponse(resp.to_xml(), content_type='text/xml')
