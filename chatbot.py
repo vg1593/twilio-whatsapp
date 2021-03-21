@@ -21,7 +21,6 @@ Flow = {
         "language":True
     },
     "ar":{
-        "text":"يمكنني المساعدة فيما يلي:\n[1] أدخل 1  تقديم طلب جديد ( عاملة منزلية – سائق خاص )\n[2] أدخل 2  للاستفسار عن طلب قائم\n[3] أدخل 3  للاستفسارات العامة\n[4] أدخل 4 تقديم طلب جديد لقطاع الشركات \n[5] أدخل 5  لتغير اللغة المختارة\n[q] أدخل q لإنهاء الدردشة",
         "branches":{
             "1":"new",
             "2":"existing",
@@ -31,7 +30,8 @@ Flow = {
             "q":"quit"
         },
         "value":"selected arabic as language",
-        "language":True
+        "language":True,
+        "text":"يمكنني المساعدة فيما يلي:\n[1] أدخل 1  تقديم طلب جديد ( عاملة منزلية – سائق خاص )\n[2] أدخل 2  للاستفسار عن طلب قائم\n[3] أدخل 3  للاستفسارات العامة\n[4] أدخل 4 تقديم طلب جديد لقطاع الشركات \n[5] أدخل 5  لتغير اللغة المختارة\n[q] أدخل q لإنهاء الدردشة "
     },
     "new":{
         "text":{
@@ -48,14 +48,13 @@ Flow = {
     },
     "existing":{
         "text":{
-            "en":"To inquire about an existing request, please provide us with the ID number or the contract number",
-            "ar":"للاستعلام عن طلب قائم ، الرجاء تزويدنا برقم الهوية أو رقم العقد"
+            "en":"To inquire about an existing request, please visit \nhttp://alarain.net/site/user/login",
+            "ar":"للاستعلام عن طلب موجود ، يرجى زيارة\nhttp://alarain.net/site/user/login"
         },
         "branches":{
             
         },
         "value":"To inquire about an existing request",
-        "expect_input":True
     },
     "general":{
         "text":{

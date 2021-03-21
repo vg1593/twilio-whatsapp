@@ -13,6 +13,8 @@ class WhatsappApi(APIView):
         msg = request.POST.get('Body')
         user = request.POST.get("From")[-10:]
         conversation, created = Conversation.objects.get_or_create(sender=user)
+        if not conversation.selections:
+            conversation.selections = []
         response,last,selection,language = generate_response(msg,conversation.last_selection,conversation.selections,conversation.language)
         conversation.message = response
         conversation.last_selection = last
